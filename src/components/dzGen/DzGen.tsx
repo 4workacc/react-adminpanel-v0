@@ -3,7 +3,6 @@ import React from 'react';
 import './dzGen.scss';
 
 import { NewUserSwitcher } from './NewUserSwitcher';
-import { StaticRightsSwitcher } from './StaticRightsSwitcher';
 import { UsersListPanel } from './UsersListPanel';
 
 export const DzGen = () => {
@@ -12,7 +11,7 @@ export const DzGen = () => {
         <div id="DzGen">
             <NewUserSwitcher />          
             <UsersListPanel />
-            <StaticRightsSwitcher />        
+                   
             <div className="typesOfRights">
 
             </div>
