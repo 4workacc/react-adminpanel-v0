@@ -1,6 +1,15 @@
 interface IRootState {
-    curPage:string
+    curPage:string,
+    usersList?:IUserInfoProps[]
 }
 interface iRootAction {
     type:string
+}
+
+interface IUserInfoProps {
+    id?: number,
+    fio: string,
+    code0: number,
+    code1: number,
+    employer: string
 }
