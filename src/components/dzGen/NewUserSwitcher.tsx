@@ -1,7 +1,14 @@
-import React, { useState } from 'react';
+import React, { Dispatch, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { AddUser } from '../../store/actions/AddUser';
 
 export const NewUserSwitcher:React.FC = () => {
     const [ isNewUser, switchNewUser ] = useState<boolean>(false);
+
+    const cc = useSelector((state:IRootState) => state.usersList);
+
+    const dispatch = useDispatch(); 
+
     return (
         <div>
            <div className="isNewUserPanel">
@@ -27,7 +34,13 @@ export const NewUserSwitcher:React.FC = () => {
                         <input 
                             type = "text"
                             placeholder = "enter new user fio"></input>
-                        <button>
+                        <button
+                            onClick = { () => 
+                                { 
+                                    dispatch( AddUser() );
+                                 console.log(cc);}
+                            }                                                 
+                            >
                             Add user to dz
                         </button>
                     </div>

@@ -3,7 +3,12 @@ interface IRootState {
     usersList?:IUserInfoProps[]
 }
 interface iRootAction {
-    type:string
+    type:string,
+    id?: number,
+    fio?: string,
+    code0?: number,
+    code1?: number,
+    employer?: string
 }
 
 interface IUserInfoProps {
