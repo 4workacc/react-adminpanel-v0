@@ -20,9 +20,7 @@ export const DzGen = () => {
             <div className="manualRightsPanel">
 
             </div>
-            
-            <StaticRightsSwitcher />
-            <RightCathegory />
+ 
             <hr></hr>
             <button className="dzGenBut">GeneratePDF</button>
         </div>

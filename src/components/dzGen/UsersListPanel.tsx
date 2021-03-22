@@ -8,17 +8,25 @@ const UsersListPanel:React.FC = () => {
 
     return (
         <div className="UserInfoPanel">
+            <ul>
             {  
                 storeUsersList.map ((el) => {
-                    return <UserInfo
-                        key = {el.id}
-                        id = {el.id}
-                        fio = {el.fio}
-                        code0 = {el.code0}
-                        code1 = {el.code1}
-                        employer = {el.employer} />
+                    return  <li>
+                                <UserInfo
+                                    key = {el.id}
+                                    id = {el.id}
+                                    fio = {el.fio}
+                                    code0 = {el.code0}
+                                    code1 = {el.code1}
+                                    employer = {el.employer}
+                                    trans = {el.trans} />  
+                            </li>                                         
+                                                 
+                                   
                 })  
-            }                  
+            }    
+            </ul>
+                         
         </div>
     )
 }

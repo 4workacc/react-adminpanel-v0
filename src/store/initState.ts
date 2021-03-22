@@ -1,13 +1,19 @@
 export const initState:IRootState = {
     curPage : "genDz",
+    fullUsersList: [
+        {
+            fio: "IvanovII",
+            code0: 123,
+            code1: 987,
+            employer : "emp10",
+            trans: "IvanovII"
+        },
+        {
+            fio: "PetrovPP"
+        }
+    ],
     // gzGen
     usersList : [
-        {
-            id: 0,
-            fio: "asd",
-            code0 : 1,
-            code1 : 1,
-            employer: "asd"
-        }   
+  
     ]
 }
