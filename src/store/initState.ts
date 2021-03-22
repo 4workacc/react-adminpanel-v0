@@ -1,7 +1,5 @@
 export const initState:IRootState = {
     curPage : "genDz",
-
-
     // gzGen
     usersList : [
         {
@@ -10,6 +8,6 @@ export const initState:IRootState = {
             code0 : 1,
             code1 : 1,
             employer: "asd"
-        }
+        }   
     ]
 }

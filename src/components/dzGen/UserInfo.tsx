@@ -1,7 +1,4 @@
 import React from 'react';
-import { RightCathegory } from './RightCathegory';
-
-import { StaticRightsSwitcher } from './StaticRightsSwitcher';
 
 export const UserInfo:React.FC<IUserInfoProps> = ({fio, code0, code1, employer} : IUserInfoProps) => {
     return (
@@ -13,8 +10,7 @@ export const UserInfo:React.FC<IUserInfoProps> = ({fio, code0, code1, employer} 
                 <p>employer: {employer}</p>
                 <button>CloseUserTab</button>
             </div>
-            <StaticRightsSwitcher />
-            <RightCathegory />
+          
         </div> 
     )
 }

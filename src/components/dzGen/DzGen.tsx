@@ -3,7 +3,9 @@ import React from 'react';
 import './dzGen.scss';
 
 import { NewUserSwitcher } from './NewUserSwitcher';
-import { UsersListPanel } from './UsersListPanel';
+import { RightCathegory } from './RightCathegory';
+import { StaticRightsSwitcher } from './StaticRightsSwitcher';
+import  UsersListPanel  from './UsersListPanel';
 
 export const DzGen = () => {
     
@@ -18,6 +20,10 @@ export const DzGen = () => {
             <div className="manualRightsPanel">
 
             </div>
+            
+            <StaticRightsSwitcher />
+            <RightCathegory />
+            <hr></hr>
             <button className="dzGenBut">GeneratePDF</button>
         </div>
     )

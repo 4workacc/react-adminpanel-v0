@@ -1,28 +1,24 @@
 import { initState } from './initState';
 
-export const initRed = (
+const initRed = (
     state: IRootState = initState,
-    action: iRootAction
-) => {
+    action: IRootAction
+):IRootState => {
     switch (action.type) {
-        case "AddUser" : {
-            let users = state.usersList;
-
-            let newUser: IUserInfoProps = {
-                id : users!.length,
-                fio: action.fio || "",
-                code0: action.code0 || -1,
-                code1 : action.code1 || -1,
-                employer: action.employer || ""
-            };
-
-            users?.push ( newUser );
-            return {
+        case "AddUser" : {    
+            let qq:IUserInfoProps[] = [];
+            state.usersList?.map((el:any) => {
+                qq.push(el)
+            });
+            qq.push(action.userObj||{})
+            return {                
                 ...state,
-                userList : users                
-            }
-        }
+                usersList: qq
+            }             
+        } 
         default:
             return state
     }
 }
+
+export default initRed;

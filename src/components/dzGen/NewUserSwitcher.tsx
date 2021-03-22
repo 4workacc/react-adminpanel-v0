@@ -36,9 +36,15 @@ export const NewUserSwitcher:React.FC = () => {
                             placeholder = "enter new user fio"></input>
                         <button
                             onClick = { () => 
-                                { 
-                                    dispatch( AddUser() );
-                                 console.log(cc);}
+                                {                     
+                                    let newUser:IUserInfoProps = {
+                                        fio: "QWEQWEQWEQWE",
+                                        code0 : 123123213,
+                                        code1: 13123123123,
+                                        employer: "xzczxcxzc"
+                                    }               
+                                    dispatch( AddUser( newUser ) );
+                                }
                             }                                                 
                             >
                             Add user to dz

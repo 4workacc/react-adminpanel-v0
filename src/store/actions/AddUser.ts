@@ -1,10 +1,6 @@
-export const AddUser = () => {
-    alert();
+export const AddUser = ( newUser:IUserInfoProps ) => {    
     return {
         type : "AddUser",
-        fio : "asd",
-        code0 : 1111,
-        code1 : 2222,
-        employer : "asdasdasd"
+        userObj : newUser
     }
 }
