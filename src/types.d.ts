@@ -4,7 +4,8 @@ interface IRootState {
 }
 interface IRootAction {
     type:string,
-    userObj? : IUserInfoProps
+    userObj? : IUserInfoProps,
+    deletingUser?: number
 }
 
 interface IUserInfoProps {

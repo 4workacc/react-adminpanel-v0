@@ -38,6 +38,7 @@ export const NewUserSwitcher:React.FC = () => {
                             onClick = { () => 
                                 {                     
                                     let newUser:IUserInfoProps = {
+                                        id : Math.random()*1000,
                                         fio: "QWEQWEQWEQWE",
                                         code0 : 123123213,
                                         code1: 13123123123,

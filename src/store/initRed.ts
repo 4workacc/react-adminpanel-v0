@@ -5,6 +5,20 @@ const initRed = (
     action: IRootAction
 ):IRootState => {
     switch (action.type) {
+        case "RemoveUser" : {
+            
+            let qq:IUserInfoProps[] = [];
+            state.usersList?.map((el:any) => {
+                
+                if (el.id !== action.deletingUser) 
+                    qq.push(el)
+            });            
+            
+            return {                
+                ...state,
+                usersList: qq
+            } 
+        }
         case "AddUser" : {    
             let qq:IUserInfoProps[] = [];
             state.usersList?.map((el:any) => {
